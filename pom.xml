@@ -6,7 +6,7 @@
 
 	<groupId>org.example.javalin</groupId>
 	<artifactId>docker-demo</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -20,7 +20,7 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>home</id>
 			<name>Home Repository</name>
-			<url>file:///Users/raphael.krausz/.m2</url>
+			<url>file://${user.home}/.m2</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
@@ -95,7 +95,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>localhost:5000/javalin-demo</repository>
+					<repository>zsuark/javalin-testng-docker-demo</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}-shaded.jar</JAR_FILE>
